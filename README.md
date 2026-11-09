@@ -1,435 +1,338 @@
-# <img src="https://raw.githubusercontent.com/IUTInfoAix-R510/Syllabus/main/assets/logo.png" alt="class logo" class="logo"/> Syllabus - R5.Real.10 : Nouveaux paradigmes de base de données
+# <img src="assets/logo.png" alt="class logo" class="logo" width="120"/> R5.Real.10 - Nouveaux paradigmes de base de données
 
-## BUT Informatique - 3ème année - Parcours Réalisation d'applications
+## BUT Informatique - 3ème année - Parcours A « Réalisation d'applications : conception, développement, validation » - IUT Aix-Marseille (département Informatique)
+
+---
+
+> [!IMPORTANT]
+> **À faire avant la première séance (semaine du 23 novembre 2026)**
+> 1. Avoir un **compte GitHub** et savoir s'y connecter (mot de passe et double authentification).
+> 2. Faire reconnaître son **statut étudiant** sur [GitHub Education](https://education.github.com/discount_requests/application), avec ce même compte.
+> 3. Vers le **18 novembre**, accepter l'invitation à rejoindre l'organisation **`IUTInfoAix-R510-2026`**, reçue sur votre **adresse universitaire** (valable 7 jours), avec ce même compte.
+> 4. Régler sur <https://github.com/settings/codespaces> une mise en veille de 30 minutes au plus et une durée de conservation de 7 jours.
+>
+> Chaque étape est détaillée dans la section [Environnement technique](#environnement-technique).
 
 ---
 
 ## 📋 Informations générales
 
-**Intitulé** : R5.Real.10 - Nouveaux paradigmes de base de données  
-**Semestre** : S5  
-**Responsable** : Sébastien NEDJAR  
-**Volume horaire** : 32 heures  
-- 16h de cours intégrés (4 séances × 4h)
-- 12h de travail autonome encadré
-- 4h de soutenance de projet
-
-**Période** : Novembre-Décembre  
-**Salle** : Salle informatique du département
+- **Intitulé** : R5.Real.10 - Nouveaux paradigmes de base de données
+- **Semestre** : S5 (année BUT3), parcours A
+- **Volume horaire PN** : 25 h (dont 8 h de TP)
+- **Emploi du temps 2026-2027** : 32 h, soit **8 séances de 4 h** en salle machine (5 séances de TP et 3 séances de projet), du 23 novembre au 17 décembre 2026
+- **Responsable** : [Sébastien NEDJAR](mailto:sebastien.nedjar@univ-amu.fr)
+- **Équipe pédagogique** :
+  - [Sébastien NEDJAR](mailto:sebastien.nedjar@univ-amu.fr) - groupe **GA1** (A1-1, A1-2)
+  - [Leïla SAKLI MILED](mailto:leila.SAKLI@univ-amu.fr) - groupe **GA2** (A2-1, A2-2)
+- **Format des séances** : blocs de 4 h en salle machine, par groupe. Les deux groupes suivent **exactement les mêmes TP et le même projet**.
+- **Ressource officielle** : [Annexe 15 du PN BUT Informatique 2022, mis à jour en 2023 - fiche R5.Real.10 p. 160](https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2023-12/informatique-30855.pdf#page=160)
+- **Mots-clés officiels** : Paradigme non relationnel - NoSQL
 
 ---
 
 ## 🎯 Objectifs pédagogiques
 
-### Objectif général
-Maîtriser les concepts et la mise en œuvre des bases de données NoSQL, en particulier MongoDB, pour répondre aux besoins modernes de stockage et traitement de données non structurées à grande échelle.
+### Objectif général (extrait du PN)
 
-### Compétences visées (référentiel BUT)
+> *L'objectif de cette ressource est d'appréhender les paradigmes non relationnels de base de données intégrés pour le développement d'applications sur des supports spécifiques. Cette ressource développe les différentes implémentations des données dans l'entreprise qui pourront être utilisée dans des développements d'applications spécifiques.*
 
-#### Compétence 1 : Réaliser un développement d'application
-- **AC21.01** : Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences
-- **AC21.02** : Appliquer des principes d'accessibilité et d'ergonomie
-- **AC21.04** : Intégrer des solutions dans un environnement de production
+En pratique, le module étudie **deux paradigmes non relationnels** :
 
-#### Compétence 4 : Gérer des données de l'information
-- **AC24.01** : Optimiser les modèles de données de l'entreprise
-- **AC24.02** : Assurer la sécurité des données
-- **AC24.04** : Manipuler des données hétérogènes
+- le modèle **document**, avec **MongoDB** (requêtes, agrégation, modélisation, index) ;
+- le modèle **graphe**, avec **Neo4j** et le langage **Cypher** (motifs, chemins, recommandation).
 
-#### Compétence 6 : Collaborer au sein d'une équipe informatique
-- **AC26.03** : Adapter ses pratiques techniques pour répondre au besoin métier
+Les autres familles (clé-valeur, colonnes, vectoriel, multi-modèle) sont situées en cours. L'objectif est de savoir **choisir le modèle adapté aux requêtes** et de l'intégrer dans une application.
 
-### Acquis d'apprentissage visés
+### Compétences BUT ciblées
 
-À l'issue de cette ressource, l'étudiant sera capable de :
+| Compétence | Intitulé |
+|---|---|
+| **Compétence 1 - Réaliser** | Développer - c'est-à-dire concevoir, coder, tester et intégrer - une solution informatique pour un client |
+| **Compétence 2 - Optimiser** | Proposer des applications informatiques optimisées en fonction de critères spécifiques : temps d'exécution, précision, consommation de ressources |
 
-1. **Analyser** les différences entre bases relationnelles et NoSQL et choisir la solution adaptée
-2. **Concevoir** des modèles de données orientés document optimisés
-3. **Implémenter** des opérations CRUD complexes en MongoDB
-4. **Optimiser** les performances par l'indexation et les bonnes pratiques
-5. **Développer** une application complète intégrant MongoDB
-6. **Évaluer** la pertinence du NoSQL pour différents cas d'usage
+### Apprentissages critiques (AC)
+
+> [!NOTE]
+> **Lecture des codes d'apprentissages critiques** : dans le PN BUT Informatique, le code `ACLC.NN` se décompose ainsi :
+> - `L` = niveau (1 = BUT1, 2 = BUT2, 3 = BUT3)
+> - `C` = numéro de la compétence
+> - `NN` = numéro de l'AC dans cette compétence à ce niveau
+
+Les apprentissages critiques officiellement rattachés à R5.Real.10 :
+
+- **AC31.02** - Faire évoluer une application existante *(projet : faire évoluer le squelette SteamCity fourni)*
+- **AC31.03** - Intégrer des solutions dans un environnement de production *(environnement Codespaces reproductible, conteneurs MongoDB et Neo4j, index et analyse des plans d'exécution)*
+- **AC32.03** - Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application (imagerie, immersion, intelligence artificielle, jeux vidéos, parallélisme, calcul formel...) *(choisir le paradigme selon les requêtes, pilote Java MongoDB)*
+
+### Savoirs de référence (descriptif PN)
+
+- Concepts, structures de données et langages d'interrogation (par ex. : base de données mobiles, embarquées, objets, NoSQL - déductives, clés-valeurs, **documents**, colonnes, **graphe**...)
+
+### SAÉ concernée par cette ressource
+
+- **SAÉ 5.Real.01** - Développement avancé : développer en équipe une application qui doit « utiliser des API complexes (framework, ...), interroger une base de données et s'appuyer sur un serveur ».
+
+### Acquis d'apprentissage détaillés (implémentation 2026-2027)
+
+À l'issue de cette ressource, vous serez capable de :
+
+1. **Justifier** le choix d'un paradigme (relationnel, document, graphe) à partir des requêtes attendues *(AC32.03)*
+2. **Manipuler** des documents MongoDB : CRUD, documents imbriqués et tableaux, opérateurs de requête *(AC31.03)*
+3. **Analyser** des données avec le pipeline d'agrégation : `$match`, `$group`, `$unwind`, `$lookup`, `$bucket`, `$facet` *(AC32.03)*
+4. **Concevoir** un modèle document : embedding ou référencement, patterns de conception (Subset, Computed, Bucket...) *(AC31.02, AC32.03)*
+5. **Optimiser** les requêtes : index simples et composés, `explain()`, contraintes et `PROFILE` côté graphe *(AC31.03)*
+6. **Modéliser** un graphe de propriétés à partir d'un schéma relationnel et l'interroger en **Cypher** : motifs, agrégation, chemins de longueur variable, recommandation *(AC32.03)*
+7. **Intégrer** MongoDB dans une application **Java** (API REST **Javalin**, pilote MongoDB) et, en bonus, modéliser dans Neo4j la topologie des capteurs *(AC31.02, AC31.03)*
 
 ---
 
 ## 📚 Prérequis
 
-### Connaissances requises
-- **R3.01** : Bases de données relationnelles et SQL (niveau confirmé)
-- **R2.02** : Programmation objet (niveau intermédiaire)
-- **R4.01** : Architecture logicielle et API REST (notions)
+### Ressources BUT mobilisées
+
+- **R1.05** (Introduction aux bases de données et SQL), **R2.06** (Exploitation d'une base de données), **R3.07** (SQL dans un langage de programmation), **R4.03** (Qualité et au-delà du relationnel) : modèle relationnel, SQL, accès aux données depuis un programme
+- **R2.01** (Développement orienté objets) et la suite du parcours : programmation **Java**
+- **R2.03** (Qualité de développement) : Git, tests unitaires
 
 ### Compétences techniques
-- Maîtrise des concepts de modélisation relationnelle
-- Capacité à écrire des requêtes SQL complexes
-- Utilisation de Git et d'un IDE
-- Compréhension du format JSON
+
+- Écrire des requêtes SQL avec jointures et agrégations
+- Programmer en Java (classes, collections, exceptions) et lire une trace d'exécution
+- Utiliser Git et GitHub (clone, commit, push, branches, pull requests)
+- Lire et écrire du JSON
+
+### Environnement technique
+
+> [!IMPORTANT]
+> **Tout le travail se fait dans GitHub Codespaces**, dans le navigateur. Vous n'avez rien à installer, ni sur les postes de l'IUT ni sur votre machine : chaque TP fournit un environnement préconfiguré, bases de données comprises.
+
+- **GitHub Codespaces** : environnement de développement en ligne, sur la machine **2 cœurs** prévue pour le module
+- **MongoDB 8.0** (TP1 à TP3, projet) et **Neo4j Community 2026** (TP4, bonus du projet) : lancés dans le codespace du TP concerné
+- **VS Code** + extensions **MongoDB for VS Code** (playgrounds) et **Neo4j**
+- **Java 25**, **Maven** (via le wrapper `./mvnw` fourni), **Javalin** et le pilote Java MongoDB pour le projet (pilote Neo4j facultatif, pour le bonus)
+- **Classroom 50** ([classroom50.org](https://classroom50.org/)), qui remplace GitHub Classroom : vous vous y connectez avec votre compte GitHub pour accepter les TP et suivre vos rendus
+
+#### Votre compte GitHub et votre quota Codespaces
+
+Les codespaces sont décomptés de **votre quota personnel GitHub**, celui du compte qui crée le codespace. Le quota se compte en **heures-cœur** : une heure sur une machine 2 cœurs consomme 2 heures-cœur.
+
+| Compte | Quota mensuel | Soit, en 2 cœurs |
+|---|---|---|
+| Compte gratuit | 120 heures-cœur et 15 Go de stockage | environ 60 h |
+| Statut étudiant reconnu (GitHub Education) | 180 heures-cœur et 20 Go de stockage | environ 90 h |
+
+Pour que ce quota ait les meilleures chances de suffire jusqu'à la fin du module :
+
+1. **Faites reconnaître votre statut étudiant** sur [GitHub Education](https://education.github.com/discount_requests/application). La validation peut prendre quelques jours : si elle n'est pas arrivée le 23/11, commencez quand même, le quota gratuit suffit pour novembre.
+2. **Gardez la machine 2 cœurs** : une machine 4 cœurs consomme le quota deux fois plus vite.
+3. **Supprimez le codespace d'un TP une fois sa date limite passée**, après avoir vérifié sur github.com que vos derniers commits y sont. La suppression efface les modifications non poussées et le contenu des bases, mais pas les fichiers poussés. Un codespace arrêté continue d'occuper de l'espace de stockage.
+4. Sur <https://github.com/settings/codespaces>, réglez une **mise en veille** de 30 minutes au plus et une **durée de conservation** de 7 jours.
+
+Le quota se renouvelle chaque mois et il est **commun à tous vos usages de Codespaces**, y compris dans d'autres modules. S'il est épuisé, GitHub bloque vos codespaces jusqu'au mois suivant : **prévenez immédiatement votre enseignant**.
+
+#### Rejoindre l'organisation du module
+
+Vers le **18 novembre 2026**, vous recevrez sur votre **adresse universitaire** une invitation GitHub à rejoindre l'organisation **`IUTInfoAix-R510-2026`**. Sans elle, vous ne pourrez pas récupérer les TP.
+
+- Votre compte GitHub n'a pas besoin d'utiliser votre adresse universitaire. Mais **acceptez l'invitation avec le compte dont vous avez fait reconnaître le statut étudiant** : c'est son quota qui sera décompté.
+- L'invitation est valable **7 jours**. Si elle a expiré ou si vous ne la trouvez pas (pensez aux spams), signalez-le en début de première séance.
 
 ---
 
 ## 📖 Programme détaillé
 
-### Séance 1 : Introduction au NoSQL et découverte de MongoDB (4h)
+### Calendrier 2026-2027
 
-#### Objectifs
-- Comprendre les limites du modèle relationnel
-- Identifier les cas d'usage du NoSQL
-- Maîtriser les opérations CRUD de base
+Le module se déroule sur **4 semaines**, à raison de **2 séances de 4 h par semaine et par groupe**. Les jours et horaires changent d'une semaine à l'autre et d'un groupe à l'autre : **consultez ADE**.
 
-#### Contenu
-1. **Cours théorique** (1h)
-   - Évolution des besoins : Big Data, temps réel, flexibilité
-   - Théorème CAP et ses implications
-   - Les 4 familles NoSQL : Document, Clé-valeur, Colonnes, Graphe
-   - Positionnement de MongoDB
+| Semaine | Séance | Contenu |
+|---|---|---|
+| Sem. du 23/11/2026 | S1 | **TP1** MongoDB - documents et CRUD |
+| | S2 | **TP1** MongoDB (suite) - documents imbriqués, tableaux, initiation à l'agrégation |
+| Sem. du 30/11/2026 | S3 | **TP2** MongoDB - requêtes avancées, pipeline d'agrégation, index |
+| | S4 | **TP3** MongoDB - modélisation de données et patterns de conception |
+| Sem. du 7/12/2026 | S5 | **TP4** Neo4j - du relationnel au graphe, Cypher |
+| | S6 | **Projet** - lancement, modèle de données, chargement des données |
+| Sem. du 14/12/2026 | S7 | **Projet** - agrégations, API REST, index ; module graphe en bonus |
+| | S8 | **Projet** - finalisation et **questions individuelles au poste** (dernière séance au plus tard le jeudi 17/12) |
 
-2. **Travaux pratiques** (3h)
-   - Configuration MongoDB Atlas
-   - Premières manipulations : bases, collections, documents
-   - CRUD simple avec MongoDB Compass et Shell
-   - Modélisation d'une bibliothèque
+Les **dates limites de rendu** sont indiquées dans l'énoncé de chaque TP.
 
-#### Livrables
-- Compte Atlas configuré
-- Base de données personnelle créée
-- 20 requêtes CRUD exécutées
+### Supports de cours
 
----
+Les notions sont présentées en début de séance. Les supports sont listés dans le dépôt [`cours`](https://github.com/IUTInfoAix-R510/cours) :
 
-### Séance 2 : Requêtage avancé et opérateurs (4h)
+- Introduction aux bases de données NoSQL : limites du relationnel, théorème CAP, familles NoSQL
+- Interroger MongoDB : MQL, opérateurs, framework d'agrégation
+- Modifier les données : insertion, mise à jour, suppression
+- Patterns de conception MongoDB
+- Bases de données graphe et Cypher (support ajouté pour la séance S5)
 
-#### Objectifs
-- Maîtriser les opérateurs de requête MongoDB
-- Comprendre les requêtes sur structures imbriquées
-- Utiliser les pipelines d'agrégation
+### Travaux pratiques
 
-#### Contenu
-1. **Opérateurs de requête** (1h30)
-   - Comparaison : `$gt`, `$gte`, `$lt`, `$lte`, `$ne`, `$in`
-   - Logiques : `$or`, `$and`, `$not`, `$nor`
-   - Tableaux : `$all`, `$elemMatch`, `$size`
-   - Existence et type : `$exists`, `$type`
+> [!IMPORTANT]
+> **Accès aux TP** : les liens d'acceptation sont publiés dans le tableau ci-dessous, au fur et à mesure. Accepter un TP crée votre dépôt personnel **privé** dans l'organisation `IUTInfoAix-R510-2026`, que vous ouvrez ensuite dans un codespace.
 
-2. **Agrégations** (2h30)
-   - Pipeline concept : `$match`, `$group`, `$sort`
-   - Transformations : `$project`, `$unwind`, `$lookup`
-   - Calculs : `$sum`, `$avg`, `$min`, `$max`
-   - Cas pratique : analytics sur dataset
+| TP | Thème | Séances | Accès |
+|----|-------|---------|-------|
+| **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | ⏳ À venir |
+| **TP2** | MongoDB : requêtes avancées, pipeline d'agrégation, index | S3 (4 h) | ⏳ À venir |
+| **TP3** | MongoDB : modélisation, embedding et référencement, patterns de conception | S4 (4 h) | ⏳ À venir |
+| **TP4** | Neo4j : du relationnel au graphe, Cypher, chemins, recommandation | S5 (4 h) | ⏳ À venir |
+| **Projet** | SteamCity : plateforme de capteurs pour l'enseignement | S6-S8 (12 h) | ⏳ À venir |
 
-#### Livrables
-- Dataset analysé
-- 10 pipelines d'agrégation créés
-- Rapport d'analyse de données
+Les TP 1 à 4 se font dans des **playgrounds** (fichiers `.mongodb.js` pour MongoDB, `.cypher` pour Neo4j) : chaque exercice a son emplacement, vous y écrivez et exécutez vos requêtes directement dans VS Code.
 
----
+Un même domaine sert de fil conducteur : la **médiathèque** du TP1 (modèle document) est reprise dans le TP4 (modèle graphe), pour comparer les deux paradigmes sur les mêmes questions.
 
-### Séance 3 : Modélisation de données en document (4h)
+#### Rendre son travail
 
-#### Objectifs
-- Concevoir des modèles orientés document
-- Choisir entre embedding et referencing
-- Appliquer les patterns de modélisation
+- Rendre un TP, c'est **commiter, pousser**, puis lancer la **commande de rendu** indiquée dans la section « Rendre son travail » de chaque énoncé.
+- **Ne renommez jamais vos dépôts** de TP ou de projet : Classroom 50 ne les retrouverait plus.
+- Après la date limite, un rendu est marqué **en retard** ; les conséquences et la date de clôture sont précisées dans chaque énoncé.
 
-#### Contenu
-1. **Principes de modélisation** (1h30)
-   - Dénormalisation vs Normalisation
-   - Critères de décision : fréquence lecture/écriture, taille, cohérence
-   - Anti-patterns à éviter
+#### Errata
 
-2. **Design Patterns** (2h30)
-   - Pattern Subset pour données partielles
-   - Pattern Bucket pour séries temporelles
-   - Pattern Computed pour pré-calculs
-   - Pattern Tree pour hiérarchies
-   - Exercice : refactoring d'un schéma relationnel
+Une fois un TP publié, son énoncé n'est plus modifié dans les dépôts déjà créés. Les corrections éventuelles sont listées ici.
 
-#### Livrables
-- 3 modèles de données conçus
-- Justification des choix de modélisation
-- Comparaison performances avant/après
+*Aucun erratum pour l'instant.*
+
+### Projet SteamCity (S6-S8)
+
+**Sujet** : une plateforme de supervision de capteurs pédagogiques (expériences, capteurs, mesures), réalisée en **équipe**.
+
+- **Pile technique imposée** : **Java**, **Javalin** (API REST), **MongoDB** (pilote Java), front web léger. Un **squelette fonctionnel est fourni** : vous le faites évoluer.
+- **Attendus** : un modèle de données document justifié, des pipelines d'agrégation utiles, des index pertinents, une API REST testée, une documentation d'architecture.
+- **Bonus graphe** : un module **Neo4j** facultatif, qui modélise et interroge la topologie bâtiment → étage → salle → capteur, reliée aux données MongoDB. Il rapporte des points supplémentaires.
+- Les équipes sont constituées **à l'intérieur de chaque groupe**, avant la séance S6 ; les modalités sont données en séance. Le projet se fait dans un **dépôt d'équipe**. L'énoncé détaillé et le barème complet sont publiés au lancement du projet.
 
 ---
 
-### Séance 4 : Performance et indexation (4h)
+## 🎓 Philosophie pédagogique
 
-#### Objectifs
-- Comprendre le fonctionnement des index MongoDB
-- Optimiser les performances des requêtes
-- Monitorer et analyser les performances
+### Un environnement unique et reproductible
 
-#### Contenu
-1. **Types d'index** (1h30)
-   - Index simple et composé
-   - Index multikey et text
-   - Index géospatial (2dsphere)
-   - Index TTL et unique
+Tout le monde travaille dans le même environnement : un codespace préconfiguré par TP, avec les mêmes versions de MongoDB, Neo4j et Java. Fini le « ça marche sur ma machine » : une requête que vous écrivez s'exécutera dans le même environnement chez l'enseignant.
 
-2. **Optimisation** (2h30)
-   - Explain plan et analyse
-   - Stratégies d'indexation
-   - Gestion de la mémoire (WiredTiger)
-   - Exercices sur dataset 100k
+### Requête par petits pas
 
-#### Livrables
-- Plan d'indexation optimisé
-- Rapport de performance (avant/après)
-- Dashboard de monitoring créé
+Chaque exercice se traite **une requête à la fois** : écrire, exécuter, lire le résultat, corriger. Pour les requêtes complexes (pipelines d'agrégation, motifs Cypher), construisez-les **étape par étape** en vérifiant le résultat intermédiaire.
+
+### Utilisation de l'IA
+
+- ✅ L'IA (Copilot Chat ou autre) est **autorisée comme tuteur** : comprendre un concept, un message d'erreur, un opérateur, comparer deux approches.
+- ❌ Lui faire écrire la requête ou le code à votre place vous prive de l'apprentissage visé.
+- Dans le projet, **l'usage de l'IA doit être documenté** dans le dépôt de l'équipe.
+- **Pourquoi c'est essentiel** : la part individuelle du projet est évaluée par des **questions au poste** sur le code de votre équipe. Vous devez être capable d'expliquer et de modifier tout ce que vous revendiquez.
+
+### Workflow professionnel (projet)
+
+- Dépôt d'équipe, **branches** thématiques et **pull requests**
+- **Revue de code** entre coéquipiers avant de fusionner
+- Commits clairs et réguliers : l'historique Git sert à apprécier la contribution de chacun
 
 ---
 
-### Séance 5 : Intégration applicative et drivers (4h)
+## 📊 Évaluations
 
-#### Objectifs
-- Intégrer MongoDB dans une application
-- Gérer les connexions et pools
-- Implémenter les bonnes pratiques
+| Contrôle | Poids | Modalité | Description |
+|----------|-------|----------|-------------|
+| **CC - TP** | **40 %** | Autograding | TP1 16 %, TP2 8 %, TP3 8 %, TP4 8 % |
+| **Projet** | **60 %** | | |
+| ↳ note d'équipe | 45 % | Rendu du dépôt d'équipe | Note commune à l'équipe, bonus graphe compris |
+| ↳ note individuelle | 15 % | Séance S8 + historique Git | Questions au poste et contributions personnelles |
 
-#### Contenu
-1. **Drivers officiels** (1h30)
-   - Architecture et connexion
-   - Gestion des erreurs
-   - Curseurs et pagination
-   - Bulk operations
+> [!NOTE]
+> La répartition **CC 40 % / projet 60 %** est fixée. Le détail à l'intérieur de chaque partie est **indicatif**, sous réserve des modalités de contrôle des connaissances (MCCC) ; toute modification sera annoncée ici.
 
-2. **Développement API REST** (2h30)
-   - Node.js + Express + MongoDB
-   - CRUD endpoints
-   - Validation des données
-   - Tests et documentation
+### CC - Travaux pratiques (40 %)
 
-#### Livrables
-- API REST fonctionnelle (6 endpoints)
-- Documentation OpenAPI
-- Tests unitaires
+Le poids de chaque TP est proportionnel à son nombre de séances. Chaque TP est évalué par **autograding** :
 
----
+- à chaque rendu, des **tests automatiques** exécutent vos requêtes sur une base de test (MongoDB ou Neo4j) et vérifient leurs résultats ;
+- votre **score s'affiche dans Classroom 50** : vous savez quels exercices sont validés et pouvez corriger avant la date limite ;
+- la note retenue est celle de votre **dernier rendu** dans les délais fixés par l'énoncé ;
+- l'équipe pédagogique peut **vérifier les réponses** (réponses écrites en dur, recopie) et ajuster la note en conséquence.
 
-### Séance 6 : Fonctionnalités avancées (4h)
+### Projet - note d'équipe (45 %)
 
-#### Objectifs
-- Utiliser les transactions MongoDB
-- Implémenter la recherche full-text
-- Exploiter les Change Streams
+**Barème indicatif** sur 100 :
 
-#### Contenu
-1. **Transactions multi-documents** (1h30)
-   - ACID dans MongoDB
-   - Sessions et transactions
-   - Cas d'usage bancaire
+| Critère | Points |
+|---|---|
+| Données : modèle document justifié, pipelines d'agrégation, index et `explain()`, jeu de données | 50 |
+| API REST Javalin et tests | 25 |
+| Front web | 10 |
+| Documentation d'architecture | 15 |
+| **Bonus graphe** (module Neo4j) | jusqu'à +10, note plafonnée à 100 |
 
-2. **Fonctionnalités avancées** (2h30)
-   - Recherche textuelle et scoring
-   - GridFS pour fichiers volumineux
-   - Change Streams pour temps réel
-   - Géospatial queries
+Le barème détaillé est publié avec l'énoncé du projet.
 
-#### Livrables
-- Système transactionnel implémenté
-- Recherche full-text configurée
-- Notification temps réel démontrée
+### Projet - note individuelle (15 %)
+
+- **Questions au poste** pendant la séance S8 (environ 6 minutes par étudiant, sans présentation ni jury) : vous expliquez une partie du code de votre équipe que vous avez réalisée, puis vous la modifiez devant l'enseignant (ajouter un filtre, un index...).
+- **Contributions** : au moins une pull request significative et une revue de la pull request d'un coéquipier. L'historique Git est lu de manière **qualitative** : on ne compte pas les commits.
+
+> [!NOTE]
+> Les deux groupes utilisent les **mêmes grilles** et la **même banque de questions**. Une partie des copies est corrigée par les deux enseignants pour harmoniser les notes.
 
 ---
 
-### Séance 7 : Architecture et écosystème (4h)
-
-#### Objectifs
-- Comprendre l'architecture distribuée
-- Comparer avec autres solutions NoSQL
-- Préparer le déploiement production
-
-#### Contenu
-1. **Architecture MongoDB** (1h30)
-   - Replica Sets et haute disponibilité
-   - Sharding et scalabilité horizontale
-   - Stratégies de backup
-
-2. **Écosystème NoSQL** (2h30)
-   - Comparaison : Redis, Cassandra, Neo4j
-   - Critères de choix technologique
-   - Retours d'expérience industrie
-   - Présentation des projets étudiants
-
-#### Livrables
-- Architecture distribuée conçue
-- Étude comparative NoSQL
-
----
-
-### Séance 8 : Projet autonome (4h)
-
-#### Modalité
-Travail en autonomie encadré sur le projet final
-
-#### Objectifs
-- Finaliser le développement
-- Optimiser les performances
-- Préparer la soutenance
-
-#### Support
-- Assistance technique à la demande
-- Revue de code
-- Conseils architecture
-
----
-
-## 🚀 Projet intégrateur
-
-### Sujet : Plateforme IoT de science citoyenne
-
-#### Contexte
-Ce projet consiste à développer un système de monitoring IoT urbain utilisant MongoDB pour la gestion des données de capteurs.
-#### Description
-Vous devrez développer une plateforme de supervision de réseaux de capteurs urbains (qualité de l'air, température, humidité, bruit, trafic, ...). Les étudiants travailleront en équipes pour implémenter différents modules de cette plateforme en utilisant MongoDB comme base de données principale.
-
-#### Spécifications techniques
-- Backend : Node.js + MongoDB
-- Frontend : Au choix (React, Vue, Angular, ou simple HTML/JS)
-- Déploiement : MongoDB Atlas + service cloud
-- Documentation : README complet + API docs
-
-#### Livrables attendus
-1. **Code source** sur GitLab/GitHub
-2. **Modèle de données** documenté
-3. **API REST**
-4. **Interface utilisateur** fonctionnelle
-5. **Rapport technique**
-6. **Soutenance orale** (10 min)
-
-### Critères d'évaluation projet
-- Pertinence de la modélisation : 25%
-- Qualité du code et architecture : 25%
-- Performances et optimisation : 20%
-- Fonctionnalités implémentées : 20%
-- Documentation et présentation : 10%
-
----
-
-## 📊 Modalités d'évaluation
-
-### Répartition de la note finale
-
-| Type | Coefficient | Description | Date |
-|------|------------|-------------|------|
-| **Contrôle continu** | 30% | Exercices pratiques hebdomadaires | Chaque séance |
-| **Projet** | 70% | Application complète MongoDB | Séances 7-8 |
-
-### Barème détaillé
-
-#### Contrôle continu (30%)
-- Participation active : 5%
-- Exercices rendus : 15%
-- Mini-challenges : 10%
-
-#### Projet (70%)
-- Technique : 40%
-- Innovation : 10%
-- Documentation : 10%
-- Soutenance : 10%
-
-### Critères de validation
-- Note minimale : 10/20
-- Présence obligatoire : 80% minimum
-- Tous les livrables rendus
-
----
-
-## 📚 Ressources pédagogiques
-
-### Documentation officielle
-- **MongoDB Manual** : https://docs.mongodb.com/manual/
-- **MongoDB University** : https://university.mongodb.com/
-- **MongoDB Atlas** : https://www.mongodb.com/atlas
-
-### Bibliographie recommandée
-- *MongoDB: The Definitive Guide* (3rd Edition) - Shannon Bradshaw, Kristina Chodorow
-- *MongoDB in Action* (2nd Edition) - Kyle Banker
-- *Design Patterns for MongoDB* - MongoDB Inc.
-
-### Outils requis
-- **MongoDB Atlas** : Compte gratuit M0
-- **MongoDB Compass** : Interface graphique
-- **VS Code** : Avec extension MongoDB
-- **Node.js** : Version 18+
-- **Git** : Pour versioning
-
----
-
-## 💻 Environnement technique
-
-### Configuration minimale
-- RAM : 8 GB minimum
-- Navigateur : Chrome/Firefox récent
-- Connexion Internet stable
-- Espace disque : 2 GB
-
-### Accès aux ressources
-- **MongoDB Atlas** : Base cloud gratuite
-
----
-
-## 📝 Règles et bonnes pratiques
-
-### Pendant les séances
-- Laptops autorisés et encouragés
-- Travail en binôme possible pendant les TP
-- Questions bienvenues à tout moment
-- Pauses de 10 min toutes les 2h
-
-### Pour les rendus
-- Code commenté en français ou anglais
-- Respect des conventions de nommage
-- Tests unitaires appréciés
-- Documentation README obligatoire
-
-### Plagiat et intégrité
-- Code original exigé
-- Sources citées obligatoirement
-- Collaboration encouragée, copie sanctionnée
-- Utilisation d'IA à documenter
-
----
-
-## 🤝 Contact et support
-**Enseignant** : Sébastien NEDJAR  
-**Email** : sebastien.nedjar@univ-amu.fr  
-
-**En cas de difficulté** :
-1. Consulter la documentation
-2. Demander aux pairs
-3. Contact enseignant
-
----
-
-## 📅 Planning prévisionnel
-
-| Semaine | Séance | Thème | Livrable |
-|---------|--------|-------|----------|
-| S1 | 1 | Introduction NoSQL & MongoDB | Setup Atlas |
-| S2 | 2 | Requêtage avancé | Exercices requêtes |
-| S3 | 3 | Modélisation document | Modèles conçus |
-| S3 | 4 | Performance & Index | Optimisations proposées |
-| S4 | 5 | Intégration applicative | API REST |
-| S4 | 6 | Fonctionnalités avancées | Features impl. |
-| S4 | 7 | Architecture & Présentations | **Soutenance projet** |
-| S4 | 8 | Travail autonome projet | Code final |
-
----
-
-## ⚠️ Informations importantes
+## 📝 Règles
 
 ### Absences
-- Justificatif sous 48h
-- Rattrapage possible des TP
-- Au-delà de 20% d'absence : défaillance
+
+- Justificatif sous 48 h
+- Au-delà de 20 % d'absence : défaillance
+- Les TP se faisant dans Codespaces, une séance manquée se rattrape avant la date limite du TP. Une absence justifiée à la séance S8 donne lieu à des questions au poste reprogrammées avec l'enseignant de votre groupe.
+
+### Plagiat et intégrité
+
+- Code et requêtes originaux exigés ; les sources utilisées doivent être citées
+- Collaboration encouragée, copie sanctionnée
+- Usage de l'IA à documenter dans le projet
 
 ### Adaptations pédagogiques
-- Étudiants en situation de handicap, sportifs haut niveau : contacter le responsable en début de semestre
 
-### Feedback et amélioration
-- Questionnaire mi-parcours
-- Évaluation finale de la ressource
-- Suggestions bienvenues
+Étudiants en situation de handicap, sportifs de haut niveau : contactez le responsable en début de module.
 
 ---
 
-*Ce syllabus est susceptible d'évoluer selon la progression du groupe et les contraintes institutionnelles.*
+## 🛠️ Ressources techniques
+
+### Dépôts GitHub (organisation [`IUTInfoAix-R510`](https://github.com/IUTInfoAix-R510))
+
+- [`syllabus`](https://github.com/IUTInfoAix-R510/syllabus) - ce document, avec les liens des TP et les errata
+- [`cours`](https://github.com/IUTInfoAix-R510/cours) - supports de cours
+- Vos dépôts de TP et de projet : organisation [`IUTInfoAix-R510-2026`](https://github.com/IUTInfoAix-R510-2026) (privés)
+
+### Documentation officielle
+
+- [MongoDB Manual](https://www.mongodb.com/docs/manual/)
+- [MongoDB : pipeline d'agrégation](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)
+- [MongoDB for VS Code](https://www.mongodb.com/docs/mongodb-vscode/)
+- [Pilote Java MongoDB](https://www.mongodb.com/docs/drivers/java/sync/current/)
+- [MongoDB University](https://learn.mongodb.com/) - cours gratuits
+- [Neo4j Cypher Manual](https://neo4j.com/docs/cypher-manual/current/)
+- [Neo4j GraphAcademy](https://graphacademy.neo4j.com/) - cours gratuits
+- [Javalin](https://javalin.io/documentation)
+- [GitHub Codespaces](https://docs.github.com/fr/codespaces)
+
+### Bibliographie
+
+- *MongoDB: The Definitive Guide* (3rd Edition) - Shannon Bradshaw, Eoin Brazil, Kristina Chodorow
+- *Graph Databases* (2nd Edition) - Ian Robinson, Jim Webber, Emil Eifrem
+
+---
+
+## 📞 Contact
+
+- **Responsable** : [Sébastien NEDJAR](mailto:sebastien.nedjar@univ-amu.fr)
+- **Groupe GA2** : [Leïla SAKLI MILED](mailto:leila.SAKLI@univ-amu.fr)
+- **Questions sur le module** : via les [issues GitHub du syllabus](https://github.com/IUTInfoAix-R510/syllabus/issues)
+- **Questions d'ordre privé** : e-mail à l'enseignant de votre groupe
+
+---
+
+*Ce syllabus peut évoluer selon la progression des groupes et les contraintes institutionnelles. Les modifications importantes sont signalées dans ce document et annoncées en séance.*
