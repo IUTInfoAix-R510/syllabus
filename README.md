@@ -108,7 +108,7 @@ Les apprentissages critiques officiellement rattachés à R5.Real.10 :
 > **Tout le travail se fait dans GitHub Codespaces**, dans le navigateur. Vous n'avez rien à installer, ni sur les postes de l'IUT ni sur votre machine : chaque TP fournit un environnement préconfiguré, bases de données comprises.
 
 - **GitHub Codespaces** : environnement de développement en ligne, sur la machine **2 cœurs** prévue pour le module
-- **MongoDB 8.0** (TP1 à TP3, projet) et **Neo4j Community 2026** (TP4, bonus du projet) : lancés dans le codespace du TP concerné
+- **MongoDB 9.0** (TP1 à TP3, projet) et **Neo4j Community 2026** (TP4, bonus du projet) : lancés dans le codespace du TP concerné
 - **VS Code** + extensions **MongoDB for VS Code** (playgrounds) et **Neo4j**
 - **Java 25**, **Maven** (via le wrapper `./mvnw` fourni), **Javalin** et le pilote Java MongoDB pour le projet (pilote Neo4j facultatif, pour le bonus)
 - **Classroom 50** ([classroom50.org](https://classroom50.org/)), qui remplace GitHub Classroom : vous vous y connectez avec votre compte GitHub pour accepter les TP et suivre vos rendus
