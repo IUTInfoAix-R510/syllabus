@@ -8,7 +8,7 @@
 > **À faire avant la première séance (semaine du 23 novembre 2026)**
 > 1. Avoir un **compte GitHub** et savoir s'y connecter (mot de passe et double authentification).
 > 2. Faire reconnaître son **statut étudiant** sur [GitHub Education](https://education.github.com/discount_requests/application), avec ce même compte.
-> 3. Vers le **18 novembre**, accepter l'invitation à rejoindre l'organisation **`IUTInfoAix-R510-2026`**, reçue sur votre **adresse universitaire** (valable 7 jours), avec ce même compte.
+> 3. Vers le **18 novembre**, accepter l'invitation à rejoindre l'organisation **`IUTInfoAix-R510-2026`**, reçue sur votre **adresse universitaire** (valable 7 jours), avec ce même compte. Puis ouvrir le [lien d'accueil Classroom 50](https://classroom50.org/IUTInfoAix-R510-2026/r510/onboard) et s'y connecter avec ce même compte.
 > 4. Régler sur <https://github.com/settings/codespaces> une mise en veille de 30 minutes au plus et une durée de conservation de 7 jours.
 >
 > Chaque étape est détaillée dans la section [Environnement technique](#environnement-technique).
@@ -61,7 +61,7 @@ Les autres familles (clé-valeur, colonnes, vectoriel, multi-modèle) sont situ�
 
 Les apprentissages critiques officiellement rattachés à R5.Real.10 :
 
-- **AC31.02** - Faire évoluer une application existante *(projet : faire évoluer le squelette SteamCity fourni)*
+- **AC31.02** - Faire évoluer une application existante *(projet : faire évoluer le squelette fourni)*
 - **AC31.03** - Intégrer des solutions dans un environnement de production *(environnement Codespaces reproductible, conteneurs MongoDB et Neo4j, index et analyse des plans d'exécution)*
 - **AC32.03** - Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application (imagerie, immersion, intelligence artificielle, jeux vidéos, parallélisme, calcul formel...) *(choisir le paradigme selon les requêtes, pilote Java MongoDB)*
 
@@ -83,7 +83,7 @@ Les apprentissages critiques officiellement rattachés à R5.Real.10 :
 4. **Concevoir** un modèle document : embedding ou référencement, patterns de conception (Subset, Computed, Bucket...) *(AC31.02, AC32.03)*
 5. **Optimiser** les requêtes : index simples et composés, `explain()`, contraintes et `PROFILE` côté graphe *(AC31.03)*
 6. **Modéliser** un graphe de propriétés à partir d'un schéma relationnel et l'interroger en **Cypher** : motifs, agrégation, chemins de longueur variable, recommandation *(AC32.03)*
-7. **Intégrer** MongoDB dans une application **Java** (API REST **Javalin**, pilote MongoDB) et, en bonus, modéliser dans Neo4j la topologie des capteurs *(AC31.02, AC31.03)*
+7. **Intégrer** MongoDB dans une application **Java** (API REST **Javalin**, pilote MongoDB) et, en bonus, modéliser une partie de ses données dans Neo4j *(AC31.02, AC31.03)*
 
 ---
 
@@ -137,6 +137,7 @@ Vers le **18 novembre 2026**, vous recevrez sur votre **adresse universitaire** 
 
 - Votre compte GitHub n'a pas besoin d'utiliser votre adresse universitaire. Mais **acceptez l'invitation avec le compte dont vous avez fait reconnaître le statut étudiant** : c'est son quota qui sera décompté.
 - L'invitation est valable **7 jours**. Si elle a expiré ou si vous ne la trouvez pas (pensez aux spams), signalez-le en début de première séance.
+- Une fois l'invitation acceptée, ouvrez le **lien d'accueil Classroom 50** : <https://classroom50.org/IUTInfoAix-R510-2026/r510/onboard>. Connectez-vous avec le même compte GitHub : vous arrivez sur la page de la classe, où apparaîtront les TP.
 
 ---
 
@@ -172,15 +173,15 @@ Les notions sont présentées en début de séance. Les supports sont listés da
 ### Travaux pratiques
 
 > [!IMPORTANT]
-> **Accès aux TP** : les liens d'acceptation sont publiés dans le tableau ci-dessous, au fur et à mesure. Accepter un TP crée votre dépôt personnel **privé** dans l'organisation `IUTInfoAix-R510-2026`, que vous ouvrez ensuite dans un codespace.
+> **Accès aux TP** : les liens d'acceptation sont dans le tableau ci-dessous. Chaque TP s'ouvre au début de la semaine où il commence (TP1 : lundi 23 novembre à 8 h) ; avant, la page indique « This assignment is locked ». Accepter un TP crée votre dépôt personnel **privé** dans l'organisation `IUTInfoAix-R510-2026`, que vous ouvrez ensuite dans un codespace.
 
 | TP | Thème | Séances | Accès |
 |----|-------|---------|-------|
-| **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | ⏳ À venir |
+| **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | [Accepter le TP1](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp1/accept) |
 | **TP2** | MongoDB : requêtes avancées, pipeline d'agrégation, index | S3 (4 h) | ⏳ À venir |
 | **TP3** | MongoDB : modélisation, embedding et référencement, patterns de conception | S4 (4 h) | ⏳ À venir |
 | **TP4** | Neo4j : du relationnel au graphe, Cypher, chemins, recommandation | S5 (4 h) | ⏳ À venir |
-| **Projet** | SteamCity : plateforme de capteurs pour l'enseignement | S6-S8 (12 h) | ⏳ À venir |
+| **Projet** | Application en équipe : Java, Javalin, MongoDB ; bonus Neo4j | S6-S8 (12 h) | ⏳ À venir |
 
 Les TP 1 à 4 se font dans des **playgrounds** (fichiers `.mongodb.js` pour MongoDB, `.cypher` pour Neo4j) : chaque exercice a son emplacement, vous y écrivez et exécutez vos requêtes directement dans VS Code.
 
@@ -198,13 +199,14 @@ Une fois un TP publié, son énoncé n'est plus modifié dans les dépôts déj�
 
 *Aucun erratum pour l'instant.*
 
-### Projet SteamCity (S6-S8)
+### Projet (S6-S8)
 
-**Sujet** : une plateforme de supervision de capteurs pédagogiques (expériences, capteurs, mesures), réalisée en **équipe**.
+**Sujet** : présenté au lancement du projet. Le projet se réalise en **équipe**.
 
-- **Pile technique imposée** : **Java**, **Javalin** (API REST), **MongoDB** (pilote Java), front web léger. Un **squelette fonctionnel est fourni** : vous le faites évoluer.
+- **Pile technique imposée** : **Java 25** au minimum (la dernière version LTS), **Javalin** (API REST), **MongoDB** (pilote Java), front web léger. Un **squelette fonctionnel est fourni** : vous le faites évoluer.
 - **Attendus** : un modèle de données document justifié, des pipelines d'agrégation utiles, des index pertinents, une API REST testée, une documentation d'architecture.
-- **Bonus graphe** : un module **Neo4j** facultatif, qui modélise et interroge la topologie bâtiment → étage → salle → capteur, reliée aux données MongoDB. Il rapporte des points supplémentaires.
+- **Bonus graphe** : un module **Neo4j** facultatif, relié aux données MongoDB. Il rapporte des points supplémentaires.
+- **Questions au poste et détecteur d'IA** : à la dernière séance, chacun répond à des questions sur le code de son équipe, et un détecteur d'IA est appliqué au code rendu. Les deux servent à pondérer la note d'équipe pour chaque étudiant (voir [Projet - pondération individuelle](#projet---pondération-individuelle)).
 - Les équipes sont constituées **à l'intérieur de chaque groupe**, avant la séance S6 ; les modalités sont données en séance. Le projet se fait dans un **dépôt d'équipe**. L'énoncé détaillé et le barème complet sont publiés au lancement du projet.
 
 ---
@@ -224,7 +226,7 @@ Chaque exercice se traite **une requête à la fois** : écrire, exécuter, lire
 - ✅ L'IA (Copilot Chat ou autre) est **autorisée comme tuteur** : comprendre un concept, un message d'erreur, un opérateur, comparer deux approches.
 - ❌ Lui faire écrire la requête ou le code à votre place vous prive de l'apprentissage visé.
 - Dans le projet, **l'usage de l'IA doit être documenté** dans le dépôt de l'équipe.
-- **Pourquoi c'est essentiel** : la part individuelle du projet est évaluée par des **questions au poste** sur le code de votre équipe. Vous devez être capable d'expliquer et de modifier tout ce que vous revendiquez.
+- **Pourquoi c'est essentiel** : dans le projet, des **questions au poste** vérifient que chacun a réellement fait son travail, et un **détecteur d'IA** est appliqué au code rendu. Vous devez être capable d'expliquer et de modifier tout ce que vous revendiquez.
 
 ### Workflow professionnel (projet)
 
@@ -239,12 +241,10 @@ Chaque exercice se traite **une requête à la fois** : écrire, exécuter, lire
 | Contrôle | Poids | Modalité | Description |
 |----------|-------|----------|-------------|
 | **CC - TP** | **40 %** | Autograding | TP1 16 %, TP2 8 %, TP3 8 %, TP4 8 % |
-| **Projet** | **60 %** | | |
-| ↳ note d'équipe | 45 % | Rendu du dépôt d'équipe | Note commune à l'équipe, bonus graphe compris |
-| ↳ note individuelle | 15 % | Séance S8 + historique Git | Questions au poste et contributions personnelles |
+| **Projet** | **60 %** | Dépôt d'équipe + séance S8 | Note d'équipe (bonus graphe compris), pondérée pour chaque étudiant : questions au poste, contributions, détecteur d'IA |
 
 > [!NOTE]
-> La répartition **CC 40 % / projet 60 %** est fixée. Le détail à l'intérieur de chaque partie est **indicatif**, sous réserve des modalités de contrôle des connaissances (MCCC) ; toute modification sera annoncée ici.
+> La répartition **CC 40 % / projet 60 %** est fixée. Le détail à l'intérieur de chaque partie est **indicatif**, sous réserve des modalités de contrôle des connaissances et des compétences (M3C) ; toute modification sera annoncée ici.
 
 ### CC - Travaux pratiques (40 %)
 
@@ -253,9 +253,9 @@ Le poids de chaque TP est proportionnel à son nombre de séances. Chaque TP est
 - à chaque rendu, des **tests automatiques** exécutent vos requêtes sur une base de test (MongoDB ou Neo4j) et vérifient leurs résultats ;
 - votre **score s'affiche dans Classroom 50** : vous savez quels exercices sont validés et pouvez corriger avant la date limite ;
 - la note retenue est celle de votre **dernier rendu** dans les délais fixés par l'énoncé ;
-- l'équipe pédagogique peut **vérifier les réponses** (réponses écrites en dur, recopie) et ajuster la note en conséquence.
+- l'équipe pédagogique **vérifiera aléatoirement** une partie des rendus (réponses écrites en dur, recopie) et ajustera la note en conséquence.
 
-### Projet - note d'équipe (45 %)
+### Projet - note d'équipe
 
 **Barème indicatif** sur 100 :
 
@@ -269,10 +269,13 @@ Le poids de chaque TP est proportionnel à son nombre de séances. Chaque TP est
 
 Le barème détaillé est publié avec l'énoncé du projet.
 
-### Projet - note individuelle (15 %)
+### Projet - pondération individuelle
 
-- **Questions au poste** pendant la séance S8 (environ 6 minutes par étudiant, sans présentation ni jury) : vous expliquez une partie du code de votre équipe que vous avez réalisée, puis vous la modifiez devant l'enseignant (ajouter un filtre, un index...).
+La note d'équipe est pondérée pour chaque étudiant. Rien ne s'ajoute à part : les éléments ci-dessous servent à vérifier la réalité du travail de chacun.
+
+- **Questions au poste** pendant la dernière séance (S8), environ 6 minutes par étudiant, sans présentation ni jury : vous expliquez une partie du code de votre équipe que vous avez réalisée, puis vous la modifiez devant l'enseignant (ajouter un filtre, un index...). Ces questions ne donnent pas la note finale, elles entrent dans la pondération.
 - **Contributions** : au moins une pull request significative et une revue de la pull request d'un coéquipier. L'historique Git est lu de manière **qualitative** : on ne compte pas les commits.
+- **Détecteur d'IA** : un filtre de détection d'IA est appliqué au code rendu. Si une équipe ne montre pas une bonne compréhension de son code pendant les questions au poste, sa note est coefficientée selon le **taux de contribution** que le détecteur lui attribue, c'est-à-dire la part du code qu'il considère comme écrite par l'équipe et non générée par une IA.
 
 > [!NOTE]
 > Les deux groupes utilisent les **mêmes grilles** et la **même banque de questions**. Une partie des copies est corrigée par les deux enseignants pour harmoniser les notes.
@@ -291,6 +294,7 @@ Le barème détaillé est publié avec l'énoncé du projet.
 
 - Code et requêtes originaux exigés ; les sources utilisées doivent être citées
 - Collaboration encouragée, copie sanctionnée
+- Modifier le correcteur ou les fichiers `.github/` d'un dépôt, supprimer une Release ou recopier les résultats attendus au lieu de les calculer est considéré comme une **fraude** et pourra donc conduire à une sanction, comme l'exclusion, conformément aux M3C
 - Usage de l'IA à documenter dans le projet
 
 ### Adaptations pédagogiques
