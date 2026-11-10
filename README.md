@@ -294,7 +294,7 @@ La note d'équipe est pondérée pour chaque étudiant. Rien ne s'ajoute à part
 
 - Code et requêtes originaux exigés ; les sources utilisées doivent être citées
 - Collaboration encouragée, copie sanctionnée
-- Modifier le correcteur ou les fichiers `.github/` d'un dépôt, supprimer une Release ou recopier les résultats attendus au lieu de les calculer est considéré comme une **fraude** et pourra donc conduire à une sanction, comme l'exclusion, conformément aux M3C
+- Modifier le correcteur automatique ou les fichiers `.github/` d'un dépôt, supprimer une Release ou recopier les résultats attendus au lieu de les calculer est considéré comme une **fraude** et pourra donc conduire à une sanction, comme l'exclusion, conformément aux M3C
 - Usage de l'IA à documenter dans le projet
 
 ### Adaptations pédagogiques
