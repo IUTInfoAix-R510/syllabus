@@ -168,7 +168,8 @@ Chaque séance commence par un **point cours** qui présente les notions à conn
 |---|---|
 | S1 | [La ressource, MongoDB et le CRUD](https://iutinfoaix-r510.github.io/cours/s1-ressource-et-mongodb.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s1-ressource-et-mongodb.pdf)) |
 | S2 | [Documents imbriqués, tableaux et premiers pipelines](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.pdf)) |
-| S3 à S5 | ⏳ À venir : requêtes avancées et index, modélisation et patterns, Neo4j et Cypher |
+| S3 | [Requêtes avancées, agrégation et index](https://iutinfoaix-r510.github.io/cours/s3-requetes-avancees-agregation-index.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s3-requetes-avancees-agregation-index.pdf)) |
+| S4 à S5 | ⏳ À venir : modélisation et patterns, Neo4j et Cypher |
 
 ### Travaux pratiques
 
@@ -178,12 +179,12 @@ Chaque séance commence par un **point cours** qui présente les notions à conn
 | TP | Thème | Séances | Accès |
 |----|-------|---------|-------|
 | **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp1/) · Cours [S1](https://iutinfoaix-r510.github.io/cours/s1-ressource-et-mongodb.html), [S2](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.html) · [Accepter le TP1](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp1/accept) |
-| **TP2** | MongoDB : requêtes avancées, pipeline d'agrégation, index | S3 (4 h) | ⏳ À venir |
+| **TP2** | MongoDB : requêtes avancées, pipeline d'agrégation, index, pilote Java | S3 (4 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp2/) · Cours [S3](https://iutinfoaix-r510.github.io/cours/s3-requetes-avancees-agregation-index.html) · [Accepter le TP2](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp2/accept) |
 | **TP3** | MongoDB : modélisation, embedding et référencement, patterns de conception | S4 (4 h) | ⏳ À venir |
 | **TP4** | Neo4j : du relationnel au graphe, Cypher, chemins, recommandation | S5 (4 h) | ⏳ À venir |
 | **Projet** | Application en équipe : Java, Javalin, MongoDB ; bonus Neo4j | S6-S8 (12 h) | ⏳ À venir |
 
-Les TP 1 à 4 se font dans des **playgrounds** (fichiers `.mongodb.js` pour MongoDB, `.cypher` pour Neo4j) : chaque exercice a son emplacement, vous y écrivez et exécutez vos requêtes directement dans VS Code.
+Les TP 1 à 4 se font dans des **playgrounds** (fichiers `.mongodb.js` pour MongoDB, `.cypher` pour Neo4j) : chaque exercice a son emplacement, vous y écrivez et exécutez vos requêtes directement dans VS Code. Le TP2 se termine par une partie en Java (pilote MongoDB et Javalin), dans un projet Maven fourni.
 
 Un même domaine sert de fil conducteur : la **médiathèque** du TP1 (modèle document) est reprise dans le TP4 (modèle graphe), pour comparer les deux paradigmes sur les mêmes questions.
 
