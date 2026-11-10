@@ -156,7 +156,7 @@ Le module se déroule sur **4 semaines**, à raison de **2 séances de 4 h par s
 | Sem. du 7/12/2026 | S5 | **TP4** Neo4j - du relationnel au graphe, Cypher |
 | | S6 | **Projet** - lancement, modèle de données, chargement des données |
 | Sem. du 14/12/2026 | S7 | **Projet** - agrégations, API REST, index ; module graphe en bonus |
-| | S8 | **Projet** - finalisation et **questions individuelles au poste** (dernière séance au plus tard le jeudi 17/12) |
+| | S8 | **Projet** - finalisation et **questions individuelles** (dernière séance au plus tard le jeudi 17/12) |
 
 Les **dates limites de rendu** sont indiquées dans l'énoncé de chaque TP.
 
@@ -206,7 +206,7 @@ Une fois un TP publié, son énoncé n'est plus modifié dans les dépôts déj�
 - **Pile technique imposée** : **Java 25** au minimum (la dernière version LTS), **Javalin** (API REST), **MongoDB** (pilote Java), front web léger. Un **squelette fonctionnel est fourni** : vous le faites évoluer.
 - **Attendus** : un modèle de données document justifié, des pipelines d'agrégation utiles, des index pertinents, une API REST testée, une documentation d'architecture.
 - **Bonus graphe** : un module **Neo4j** facultatif, relié aux données MongoDB. Il rapporte des points supplémentaires.
-- **Questions au poste et détecteur d'IA** : à la dernière séance, chacun répond à des questions sur le code de son équipe, et un détecteur d'IA est appliqué au code rendu. Les deux servent à pondérer la note d'équipe pour chaque étudiant (voir [Projet - pondération individuelle](#projet---pondération-individuelle)).
+- **Questions individuelles et détecteur d'IA** : à la dernière séance, chacun répond à des questions sur le code de son équipe, et un détecteur d'IA est appliqué au code rendu. Les deux servent à pondérer la note d'équipe pour chaque étudiant (voir [Projet - pondération individuelle](#projet---pondération-individuelle)).
 - Les équipes sont constituées **à l'intérieur de chaque groupe**, avant la séance S6 ; les modalités sont données en séance. Le projet se fait dans un **dépôt d'équipe**. L'énoncé détaillé et le barème complet sont publiés au lancement du projet.
 
 ---
@@ -226,7 +226,7 @@ Chaque exercice se traite **une requête à la fois** : écrire, exécuter, lire
 - ✅ L'IA (Copilot Chat ou autre) est **autorisée comme tuteur** : comprendre un concept, un message d'erreur, un opérateur, comparer deux approches.
 - ❌ Lui faire écrire la requête ou le code à votre place vous prive de l'apprentissage visé.
 - Dans le projet, **l'usage de l'IA doit être documenté** dans le dépôt de l'équipe.
-- **Pourquoi c'est essentiel** : dans le projet, des **questions au poste** vérifient que chacun a réellement fait son travail, et un **détecteur d'IA** est appliqué au code rendu. Vous devez être capable d'expliquer et de modifier tout ce que vous revendiquez.
+- **Pourquoi c'est essentiel** : dans le projet, des **questions individuelles** vérifient que chacun a réellement fait son travail, et un **détecteur d'IA** est appliqué au code rendu. Vous devez être capable d'expliquer et de modifier tout ce que vous revendiquez.
 
 ### Workflow professionnel (projet)
 
@@ -241,7 +241,7 @@ Chaque exercice se traite **une requête à la fois** : écrire, exécuter, lire
 | Contrôle | Poids | Modalité | Description |
 |----------|-------|----------|-------------|
 | **CC - TP** | **40 %** | Autograding | TP1 16 %, TP2 8 %, TP3 8 %, TP4 8 % |
-| **Projet** | **60 %** | Dépôt d'équipe + séance S8 | Note d'équipe (bonus graphe compris), pondérée pour chaque étudiant : questions au poste, contributions, détecteur d'IA |
+| **Projet** | **60 %** | Dépôt d'équipe + séance S8 | Note d'équipe (bonus graphe compris), pondérée pour chaque étudiant : questions individuelles, contributions, détecteur d'IA |
 
 > [!NOTE]
 > La répartition **CC 40 % / projet 60 %** est fixée. Le détail à l'intérieur de chaque partie est **indicatif**, sous réserve des modalités de contrôle des connaissances et des compétences (M3C) ; toute modification sera annoncée ici.
@@ -273,9 +273,9 @@ Le barème détaillé est publié avec l'énoncé du projet.
 
 La note d'équipe est pondérée pour chaque étudiant. Rien ne s'ajoute à part : les éléments ci-dessous servent à vérifier la réalité du travail de chacun.
 
-- **Questions au poste** pendant la dernière séance (S8), environ 6 minutes par étudiant, sans présentation ni jury : vous expliquez une partie du code de votre équipe que vous avez réalisée, puis vous la modifiez devant l'enseignant (ajouter un filtre, un index...). Ces questions ne donnent pas la note finale, elles entrent dans la pondération.
+- **Questions individuelles** pendant la dernière séance (S8), environ 6 minutes par étudiant, sans présentation ni jury : vous expliquez une partie du code de votre équipe que vous avez réalisée, puis vous la modifiez devant l'enseignant (ajouter un filtre, un index...). Ces questions ne donnent pas la note finale, elles entrent dans la pondération.
 - **Contributions** : au moins une pull request significative et une revue de la pull request d'un coéquipier. L'historique Git est lu de manière **qualitative** : on ne compte pas les commits.
-- **Détecteur d'IA** : un filtre de détection d'IA est appliqué au code rendu. Si une équipe ne montre pas une bonne compréhension de son code pendant les questions au poste, sa note est coefficientée selon le **taux de contribution** que le détecteur lui attribue, c'est-à-dire la part du code qu'il considère comme écrite par l'équipe et non générée par une IA.
+- **Détecteur d'IA** : un filtre de détection d'IA est appliqué au code rendu. Si une équipe ne montre pas une bonne compréhension de son code pendant les questions individuelles, sa note est coefficientée selon le **taux de contribution** que le détecteur lui attribue, c'est-à-dire la part du code qu'il considère comme écrite par l'équipe et non générée par une IA.
 
 > [!NOTE]
 > Les deux groupes utilisent les **mêmes grilles** et la **même banque de questions**. Une partie des copies est corrigée par les deux enseignants pour harmoniser les notes.
@@ -288,7 +288,7 @@ La note d'équipe est pondérée pour chaque étudiant. Rien ne s'ajoute à part
 
 - Justificatif sous 48 h
 - Au-delà de 20 % d'absence : défaillance
-- Les TP se faisant dans Codespaces, une séance manquée se rattrape avant la date limite du TP. Une absence justifiée à la séance S8 donne lieu à des questions au poste reprogrammées avec l'enseignant de votre groupe.
+- Les TP se faisant dans Codespaces, une séance manquée se rattrape avant la date limite du TP. Une absence justifiée à la séance S8 donne lieu à des questions individuelles reprogrammées avec l'enseignant de votre groupe.
 
 ### Plagiat et intégrité
 
