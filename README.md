@@ -162,13 +162,13 @@ Les **dates limites de rendu** sont indiquées dans l'énoncé de chaque TP.
 
 ### Supports de cours
 
-Les notions sont présentées en début de séance. Les supports sont listés dans le dépôt [`cours`](https://github.com/IUTInfoAix-R510/cours) :
+Chaque séance commence par un **point cours** qui présente les notions à connaître avant d'attaquer le TP. Les supports sont en ligne, au fur et à mesure : [page des points cours](https://iutinfoaix-r510.github.io/cours/).
 
-- Introduction aux bases de données NoSQL : limites du relationnel, théorème CAP, familles NoSQL
-- Interroger MongoDB : MQL, opérateurs, framework d'agrégation
-- Modifier les données : insertion, mise à jour, suppression
-- Patterns de conception MongoDB
-- Bases de données graphe et Cypher (support ajouté pour la séance S5)
+| Séance | Point cours |
+|---|---|
+| S1 | [La ressource, MongoDB et le CRUD](https://iutinfoaix-r510.github.io/cours/s1-ressource-et-mongodb.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s1-ressource-et-mongodb.pdf)) |
+| S2 | [Documents imbriqués, tableaux et premiers pipelines](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.pdf)) |
+| S3 à S5 | ⏳ À venir : requêtes avancées et index, modélisation et patterns, Neo4j et Cypher |
 
 ### Travaux pratiques
 
@@ -177,7 +177,7 @@ Les notions sont présentées en début de séance. Les supports sont listés da
 
 | TP | Thème | Séances | Accès |
 |----|-------|---------|-------|
-| **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp1/) · [Accepter le TP1](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp1/accept) |
+| **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp1/) · Cours [S1](https://iutinfoaix-r510.github.io/cours/s1-ressource-et-mongodb.html), [S2](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.html) · [Accepter le TP1](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp1/accept) |
 | **TP2** | MongoDB : requêtes avancées, pipeline d'agrégation, index | S3 (4 h) | ⏳ À venir |
 | **TP3** | MongoDB : modélisation, embedding et référencement, patterns de conception | S4 (4 h) | ⏳ À venir |
 | **TP4** | Neo4j : du relationnel au graphe, Cypher, chemins, recommandation | S5 (4 h) | ⏳ À venir |
@@ -305,7 +305,7 @@ La note d'équipe est pondérée pour chaque étudiant. Rien ne s'ajoute à part
 ### Dépôts GitHub (organisation [`IUTInfoAix-R510`](https://github.com/IUTInfoAix-R510))
 
 - [`syllabus`](https://github.com/IUTInfoAix-R510/syllabus) - ce document, avec les liens des TP et les errata
-- [`cours`](https://github.com/IUTInfoAix-R510/cours) - supports de cours
+- [`cours`](https://github.com/IUTInfoAix-R510/cours) - supports des points cours, [en ligne](https://iutinfoaix-r510.github.io/cours/)
 - Vos dépôts de TP et de projet : organisation [`IUTInfoAix-R510-2026`](https://github.com/IUTInfoAix-R510-2026) (privés)
 
 ### Documentation officielle
