@@ -243,9 +243,6 @@ Chaque exercice se traite **une requête à la fois** : écrire, exécuter, lire
 | **CC - TP** | **40 %** | Autograding | TP1 16 %, TP2 8 %, TP3 8 %, TP4 8 % |
 | **Projet** | **60 %** | Dépôt d'équipe + séance S8 | Note d'équipe (bonus graphe compris), pondérée pour chaque étudiant : questions individuelles, contributions, détecteur d'IA |
 
-> [!NOTE]
-> La répartition **CC 40 % / projet 60 %** est fixée. Le détail à l'intérieur de chaque partie est **indicatif**, sous réserve des modalités de contrôle des connaissances et des compétences (M3C) ; toute modification sera annoncée ici.
-
 ### CC - Travaux pratiques (40 %)
 
 Le poids de chaque TP est proportionnel à son nombre de séances. Chaque TP est évalué par **autograding** :
