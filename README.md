@@ -215,9 +215,9 @@ Une fois un TP publié, son énoncé n'est plus modifié dans les dépôts déj�
 
 Tout le monde travaille dans le même environnement : un codespace préconfiguré par TP, avec les mêmes versions de MongoDB, Neo4j et Java. Fini le « ça marche sur ma machine » : une requête que vous écrivez s'exécutera dans le même environnement chez l'enseignant.
 
-### Requête par petits pas
+### Construire ses requêtes étape par étape
 
-Chaque exercice se traite **une requête à la fois** : écrire, exécuter, lire le résultat, corriger. Pour les requêtes complexes (pipelines d'agrégation, motifs Cypher), construisez-les **étape par étape** en vérifiant le résultat intermédiaire.
+Chaque exercice se traite **une requête à la fois** : écrire, exécuter, lire le résultat, corriger. Une requête complexe (pipeline d'agrégation, motif Cypher) se construit morceau par morceau : on ajoute une étape, on regarde le résultat intermédiaire, puis on ajoute la suivante.
 
 ### Utilisation de l'IA
 
