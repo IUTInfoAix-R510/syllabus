@@ -173,11 +173,11 @@ Les notions sont présentées en début de séance. Les supports sont listés da
 ### Travaux pratiques
 
 > [!IMPORTANT]
-> **Accès aux TP** : les liens d'acceptation sont dans le tableau ci-dessous. Chaque TP s'ouvre au début de la semaine où il commence (TP1 : lundi 23 novembre à 8 h) ; avant, la page indique « This assignment is locked ». Accepter un TP crée votre dépôt personnel **privé** dans l'organisation `IUTInfoAix-R510-2026`, que vous ouvrez ensuite dans un codespace.
+> **Accès aux TP** : chaque séance commence par l'**énoncé en ligne** du TP, lien « Énoncé » du tableau ci-dessous. Il explique comment récupérer votre dépôt et ouvrir votre codespace. Les liens d'acceptation sont dans le même tableau. Chaque TP s'ouvre au début de la semaine où il commence (TP1 : lundi 23 novembre à 8 h) ; avant, la page indique « This assignment is locked ». Accepter un TP crée votre dépôt personnel **privé** dans l'organisation `IUTInfoAix-R510-2026`, que vous ouvrez ensuite dans un codespace.
 
 | TP | Thème | Séances | Accès |
 |----|-------|---------|-------|
-| **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | [Accepter le TP1](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp1/accept) |
+| **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp1/) · [Accepter le TP1](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp1/accept) |
 | **TP2** | MongoDB : requêtes avancées, pipeline d'agrégation, index | S3 (4 h) | ⏳ À venir |
 | **TP3** | MongoDB : modélisation, embedding et référencement, patterns de conception | S4 (4 h) | ⏳ À venir |
 | **TP4** | Neo4j : du relationnel au graphe, Cypher, chemins, recommandation | S5 (4 h) | ⏳ À venir |
