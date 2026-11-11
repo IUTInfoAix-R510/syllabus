@@ -170,7 +170,7 @@ Chaque séance commence par un **point cours** qui présente les notions à conn
 | S2 | [Documents imbriqués, tableaux et premiers pipelines](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.pdf)) |
 | S3 | [Requêtes avancées, agrégation et index](https://iutinfoaix-r510.github.io/cours/s3-requetes-avancees-agregation-index.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s3-requetes-avancees-agregation-index.pdf)) |
 | S4 | [Modéliser à partir des requêtes, patterns de conception](https://iutinfoaix-r510.github.io/cours/s4-modelisation-patterns.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s4-modelisation-patterns.pdf)) |
-| S5 | ⏳ À venir : Neo4j et Cypher |
+| S5 | [Du relationnel au graphe : Neo4j et Cypher](https://iutinfoaix-r510.github.io/cours/s5-graphe-neo4j-cypher.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s5-graphe-neo4j-cypher.pdf)) |
 
 ### Travaux pratiques
 
@@ -182,7 +182,7 @@ Chaque séance commence par un **point cours** qui présente les notions à conn
 | **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp1/) · Cours [S1](https://iutinfoaix-r510.github.io/cours/s1-ressource-et-mongodb.html), [S2](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.html) · [Accepter le TP1](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp1/accept) |
 | **TP2** | MongoDB : requêtes avancées, pipeline d'agrégation, index, pilote Java | S3 (4 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp2/) · Cours [S3](https://iutinfoaix-r510.github.io/cours/s3-requetes-avancees-agregation-index.html) · [Accepter le TP2](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp2/accept) |
 | **TP3** | MongoDB : modéliser à partir des requêtes, patterns de conception, séries temporelles, pilote Java | S4 (4 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp3/) · Cours [S4](https://iutinfoaix-r510.github.io/cours/s4-modelisation-patterns.html) · [Accepter le TP3](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp3/accept) |
-| **TP4** | Neo4j : du relationnel au graphe, Cypher, chemins, recommandation | S5 (4 h) | ⏳ À venir |
+| **TP4** | Neo4j : du relationnel au graphe, Cypher, chemins, recommandation | S5 (4 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp4/) · Cours [S5](https://iutinfoaix-r510.github.io/cours/s5-graphe-neo4j-cypher.html) · [Accepter le TP4](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp4/accept) |
 | **Projet** | Application en équipe : Java, Javalin, MongoDB ; bonus Neo4j | S6-S8 (12 h) | ⏳ À venir |
 
 Les TP 1 à 4 se font dans des **playgrounds** (fichiers `.mongodb.js` pour MongoDB, `.cypher` pour Neo4j) : chaque exercice a son emplacement, vous y écrivez et exécutez vos requêtes directement dans VS Code. Les TP2 et TP3 se terminent par une partie en Java (pilote MongoDB et Javalin), dans un projet Maven fourni.
