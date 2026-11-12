@@ -205,10 +205,11 @@ Une fois un TP publié, son énoncé n'est plus modifié dans les dépôts déj�
 
 **Sujet** : présenté au lancement du projet. Le projet se réalise en **équipe**.
 
-- **Pile technique imposée** : **Java 25** au minimum (la dernière version LTS), **Javalin** (API REST), **MongoDB** (pilote Java), front web léger. Un **squelette fonctionnel est fourni** : vous le faites évoluer.
-- **Attendus** : un modèle de données document justifié, des pipelines d'agrégation utiles, des index pertinents, une API REST testée, une documentation d'architecture.
-- **Bonus graphe** : un module **Neo4j** facultatif, relié aux données MongoDB. Il rapporte des points supplémentaires.
-- **Questions individuelles et détecteur d'IA** : à la dernière séance, chacun répond à des questions sur le code de son équipe, et un détecteur d'IA est appliqué au code rendu. Les deux servent à pondérer la note d'équipe pour chaque étudiant (voir [Projet - pondération individuelle](#projet---pondération-individuelle)).
+- **Pile technique imposée** : **Java 25** au minimum (la dernière version LTS), Maven par son wrapper (`./mvnw`), **Javalin** (API REST), **MongoDB** (pilote Java), un **serveur MCP** que vous implémentez et qu'un agent IA interroge, front web léger. Un **squelette fonctionnel est fourni** : vous le faites évoluer.
+- **Attendus** : une quête principale commune (modèle de données document justifié, pipelines d'agrégation, index, API REST, outils MCP, tableau de bord) et des quêtes secondaires au choix, chacune avec un indice de difficulté ; une documentation d'architecture.
+- **Bonus graphe** : un module **Neo4j** facultatif (le « trésor »), relié aux données MongoDB. Il rapporte des points supplémentaires.
+- **Rendu** : par tag `submit/…` (commande `r510-rendre`), **cinq rendus au plus** ; le dernier poussé avant la date limite est noté.
+- **Questions individuelles et détecteur d'IA** : à la dernière séance, chacun répond à des questions sur le code de son équipe, et un détecteur d'IA est appliqué au code rendu. Les questions individuelles et les contributions pondèrent la note d'équipe pour chaque étudiant ; le détecteur d'IA peut déclencher un entretien (voir [Projet - pondération individuelle](#projet---pondération-individuelle)).
 - Les équipes sont constituées **à l'intérieur de chaque groupe**, avant la séance S6 ; les modalités sont données en séance. Le projet se fait dans un **dépôt d'équipe**. L'énoncé détaillé et le barème complet sont publiés au lancement du projet.
 
 ---
@@ -243,7 +244,7 @@ Chaque exercice se traite **une requête à la fois** : écrire, exécuter, lire
 | Contrôle | Poids | Modalité | Description |
 |----------|-------|----------|-------------|
 | **CC - TP** | **40 %** | Autograding | TP1 16 %, TP2 8 %, TP3 8 %, TP4 8 % |
-| **Projet** | **60 %** | Dépôt d'équipe + séance S8 | Note d'équipe (bonus graphe compris), pondérée pour chaque étudiant : questions individuelles, contributions, détecteur d'IA |
+| **Projet** | **60 %** | Dépôt d'équipe + séance S8 | Note d'équipe (bonus graphe compris), pondérée pour chaque étudiant par les questions individuelles et les contributions ; le détecteur d'IA peut déclencher un entretien |
 
 ### CC - Travaux pratiques (40 %)
 
@@ -256,25 +257,27 @@ Le poids de chaque TP est proportionnel à son nombre de séances. Chaque TP est
 
 ### Projet - note d'équipe
 
-**Barème indicatif** sur 100 :
+**Barème** sur 100 :
 
 | Critère | Points |
 |---|---|
-| Données : modèle document justifié, pipelines d'agrégation, index et `explain()`, jeu de données | 50 |
-| API REST Javalin et tests | 25 |
-| Front web | 10 |
-| Documentation d'architecture | 15 |
-| **Bonus graphe** (module Neo4j) | jusqu'à +10, note plafonnée à 100 |
+| Quête principale : les sept missions communes (données, API, outils MCP, vues du tableau de bord), vérifiées par le correcteur automatique et par une courte relecture | 40 |
+| Quêtes secondaires : les trois meilleures parmi celles déclarées (6, 9, 12 ou 15 points selon la difficulté), multipliées par un coefficient de cohérence | jusqu'à 25 |
+| Note technique et artistique : qualité technique (20) et aboutissement et cohérence du rendu (15), sur des critères observables | 35 |
+| **Bonus graphe** (module Neo4j, le « trésor ») | jusqu'à +10, note plafonnée à 100 |
 
-Le barème détaillé est publié avec l'énoncé du projet.
+Une équipe qui accumule des quêtes difficiles sans cohérence d'ensemble est moins bien notée qu'une équipe qui livre des quêtes simples dans un rendu cohérent : la cohérence multiplie les points des quêtes secondaires. Le détail (formules, critères, cas des binômes) est publié avec l'énoncé du projet.
 
 ### Projet - pondération individuelle
 
 La note d'équipe est pondérée pour chaque étudiant. Rien ne s'ajoute à part : les éléments ci-dessous servent à vérifier la réalité du travail de chacun.
 
-- **Questions individuelles** pendant la dernière séance (S8), environ 6 minutes par étudiant, sans présentation ni jury : vous expliquez une partie du code de votre équipe que vous avez réalisée, puis vous la modifiez devant l'enseignant (ajouter un filtre, un index...). Ces questions ne donnent pas la note finale, elles entrent dans la pondération.
+**Note individuelle** = min(100, note d'équipe × coefficient). Le coefficient est compris entre 0,6 et 1,1 : il vaut 0,6 + 0,5 × q, où q, compris entre 0 et 1, est fait pour 70 % des questions individuelles et pour 30 % des contributions.
+
+- **Questions individuelles** pendant la dernière séance (S8), environ 6 minutes par étudiant, sans présentation ni jury : vous expliquez une partie du code de votre équipe dont vous êtes auteur ou relecteur dans l'historique Git, puis vous la modifiez devant l'enseignant (ajouter un filtre, un index...). Ces questions ne donnent pas la note finale, elles entrent dans la pondération.
 - **Contributions** : au moins une pull request significative et une revue de la pull request d'un coéquipier. L'historique Git est lu de manière **qualitative** : on ne compte pas les commits.
-- **Détecteur d'IA** : un filtre de détection d'IA est appliqué au code rendu. Si une équipe ne montre pas une bonne compréhension de son code pendant les questions individuelles, sa note est coefficientée selon le **taux de contribution** que le détecteur lui attribue, c'est-à-dire la part du code qu'il considère comme écrite par l'équipe et non générée par une IA.
+- **Détecteur d'IA** : un filtre de détection d'IA est appliqué au code rendu. Il ne modifie pas directement la note : un résultat suspect déclenche un **entretien** avec l'enseignant, où vous devez expliquer et modifier le code concerné.
+- Le travail livré après S8 et avant la date limite compte pleinement dans la note d'équipe.
 
 > [!NOTE]
 > Les deux groupes utilisent les **mêmes grilles** et la **même banque de questions**. Une partie des copies est corrigée par les deux enseignants pour harmoniser les notes.
