@@ -79,8 +79,8 @@ Les apprentissages critiques officiellement rattachés à R5.Real.10 :
 
 1. **Justifier** le choix d'un paradigme (relationnel, document, graphe) à partir des requêtes attendues *(AC32.03)*
 2. **Manipuler** des documents MongoDB : CRUD, documents imbriqués et tableaux, opérateurs de requête *(AC31.03)*
-3. **Analyser** des données avec le pipeline d'agrégation : `$match`, `$group`, `$unwind`, `$lookup`, `$bucket`, `$facet` *(AC32.03)*
-4. **Concevoir** un modèle document : embedding ou référencement, patterns de conception (Subset, Computed, Bucket...) *(AC31.02, AC32.03)*
+3. **Analyser** des données avec le pipeline d'agrégation : `$match`, `$group`, `$unwind`, `$lookup`, `$bucket`, `$facet`, fenêtres (`$setWindowFields`), dates (`$dateTrunc`), requêtes géospatiales *(AC32.03)*
+4. **Concevoir** un modèle document : embarquer ou référencer, patterns de conception (Subset, Computed, Bucket...), résultats enregistrés par `$merge`, collections time series et rétention (TTL), validation de schéma (`$jsonSchema`) *(AC31.02, AC32.03)*
 5. **Optimiser** les requêtes : index simples et composés, `explain()`, contraintes et `PROFILE` côté graphe *(AC31.03)*
 6. **Modéliser** un graphe de propriétés à partir d'un schéma relationnel et l'interroger en **Cypher** : motifs, agrégation, chemins de longueur variable, recommandation *(AC32.03)*
 7. **Intégrer** MongoDB dans une application **Java** (API REST **Javalin**, pilote MongoDB) et, en bonus, modéliser une partie de ses données dans Neo4j *(AC31.02, AC31.03)*
@@ -151,8 +151,8 @@ Le module se déroule sur **4 semaines**, à raison de **2 séances de 4 h par s
 |---|---|---|
 | Sem. du 23/11/2026 | S1 | **TP1** MongoDB - documents et CRUD |
 | | S2 | **TP1** MongoDB (suite) - documents imbriqués, tableaux, initiation à l'agrégation |
-| Sem. du 30/11/2026 | S3 | **TP2** MongoDB - requêtes avancées, pipeline d'agrégation, index |
-| | S4 | **TP3** MongoDB - modéliser à partir des requêtes, patterns de conception |
+| Sem. du 30/11/2026 | S3 | **TP2** MongoDB - requêtes avancées, pipeline d'agrégation, index, géospatial |
+| | S4 | **TP3** MongoDB - modéliser à partir des requêtes, patterns de conception, séries temporelles, validation |
 | Sem. du 7/12/2026 | S5 | **TP4** Neo4j - du relationnel au graphe, Cypher |
 | | S6 | **Projet** - lancement, modèle de données, chargement des données |
 | Sem. du 14/12/2026 | S7 | **Projet** - agrégations, API REST, index ; module graphe en bonus |
@@ -180,8 +180,8 @@ Chaque séance commence par un **point cours** qui présente les notions à conn
 | TP | Thème | Séances | Accès |
 |----|-------|---------|-------|
 | **TP1** | MongoDB : documents, CRUD, documents imbriqués, initiation à l'agrégation | S1-S2 (8 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp1/) · Cours [S1](https://iutinfoaix-r510.github.io/cours/s1-ressource-et-mongodb.html), [S2](https://iutinfoaix-r510.github.io/cours/s2-imbrication-tableaux-agregation.html) · [Accepter le TP1](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp1/accept) |
-| **TP2** | MongoDB : requêtes avancées, pipeline d'agrégation, index, pilote Java | S3 (4 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp2/) · Cours [S3](https://iutinfoaix-r510.github.io/cours/s3-requetes-avancees-agregation-index.html) · [Accepter le TP2](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp2/accept) |
-| **TP3** | MongoDB : modéliser à partir des requêtes, patterns de conception, séries temporelles, pilote Java | S4 (4 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp3/) · Cours [S4](https://iutinfoaix-r510.github.io/cours/s4-modelisation-patterns.html) · [Accepter le TP3](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp3/accept) |
+| **TP2** | MongoDB : requêtes avancées, fenêtres, pipeline d'agrégation, index, géospatial, pilote Java | S3 (4 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp2/) · Cours [S3](https://iutinfoaix-r510.github.io/cours/s3-requetes-avancees-agregation-index.html) · [Accepter le TP2](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp2/accept) |
+| **TP3** | MongoDB : modéliser à partir des requêtes, patterns de conception, `$merge`, séries temporelles et TTL, validation `$jsonSchema`, pilote Java | S4 (4 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp3/) · Cours [S4](https://iutinfoaix-r510.github.io/cours/s4-modelisation-patterns.html) · [Accepter le TP3](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp3/accept) |
 | **TP4** | Neo4j : du relationnel au graphe, Cypher, chemins, recommandation | S5 (4 h) | [Énoncé](https://iutinfoaix-r510.github.io/tp4/) · Cours [S5](https://iutinfoaix-r510.github.io/cours/s5-graphe-neo4j-cypher.html) · [Accepter le TP4](https://classroom50.org/IUTInfoAix-R510-2026/r510/assignments/tp4/accept) |
 | **Projet** | Application en équipe : Java, Javalin, MongoDB ; bonus Neo4j | S6-S8 (12 h) | ⏳ À venir |
 
