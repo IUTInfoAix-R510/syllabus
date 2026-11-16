@@ -162,7 +162,7 @@ Les **dates limites de rendu** sont indiquées dans l'énoncé de chaque TP.
 
 ### Supports de cours
 
-Chaque séance commence par un **point cours** qui présente les notions à connaître avant d'attaquer le TP. Les supports sont en ligne, au fur et à mesure : [page des points cours](https://iutinfoaix-r510.github.io/cours/).
+Chaque séance de TP (S1 à S5) commence par un **point cours** qui présente les notions à connaître avant d'attaquer le TP. Les séances de projet commencent plus brièvement : un point cours de lancement en S6, un point d'étape en S7, les consignes des questions individuelles en S8 ; la référence du projet est dans ses guides. Les supports sont en ligne, au fur et à mesure : [page des points cours](https://iutinfoaix-r510.github.io/cours/).
 
 | Séance | Point cours |
 |---|---|
