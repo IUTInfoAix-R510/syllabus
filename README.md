@@ -274,7 +274,7 @@ La note d'équipe est pondérée pour chaque étudiant. Rien ne s'ajoute à part
 
 **Note individuelle** = min(100, note d'équipe × coefficient). Le coefficient est compris entre 0,6 et 1,1 : il vaut 0,6 + 0,5 × q, où q, compris entre 0 et 1, est fait pour 70 % des questions individuelles et pour 30 % des contributions.
 
-- **Questions individuelles** pendant la dernière séance (S8), environ 6 minutes par étudiant, sans présentation ni jury : vous expliquez une partie du code de votre équipe dont vous êtes auteur ou relecteur dans l'historique Git, puis vous la modifiez devant l'enseignant (ajouter un filtre, un index...). Ces questions ne donnent pas la note finale, elles entrent dans la pondération.
+- **Questions individuelles** pendant la dernière séance (S8), environ 6 minutes par étudiant, sans présentation ni jury : sans assistant IA ni autre aide que vos connaissances : vous expliquez puis modifiez devant l'enseignant (ajouter un filtre, un index...) n'importe quelle fonctionnalité dont vous êtes auteur ou relecteur dans l'historique Git ; tout ce que vous avez écrit ou relu peut vous être demandé. Ces questions ne donnent pas la note finale, elles entrent dans la pondération.
 - **Contributions** : au moins une pull request significative et une revue de la pull request d'un coéquipier. L'historique Git est lu de manière **qualitative** : on ne compte pas les commits.
 - **Détecteur d'IA** : un filtre de détection d'IA est appliqué au code rendu. Il ne modifie pas directement la note : un résultat suspect déclenche un **entretien** avec l'enseignant, où vous devez expliquer et modifier le code concerné.
 - Le travail livré après S8 et avant la date limite compte pleinement dans la note d'équipe.
