@@ -154,8 +154,8 @@ Le module se déroule sur **4 semaines**, à raison de **2 séances de 4 h par s
 | Sem. du 30/11/2026 | S3 | **TP2** MongoDB - requêtes avancées, pipeline d'agrégation, index, géospatial |
 | | S4 | **TP3** MongoDB - modéliser à partir des requêtes, patterns de conception, séries temporelles, validation |
 | Sem. du 7/12/2026 | S5 | **TP4** Neo4j - du relationnel au graphe, Cypher |
-| | S6 | **Projet** - lancement, modèle de données, chargement des données |
-| Sem. du 14/12/2026 | S7 | **Projet** - agrégations, API REST, index ; module graphe en bonus |
+| | S6 | **Projet** - lancement, missions P1 à P3 (données et routes en lecture) |
+| Sem. du 14/12/2026 | S7 | **Projet** - missions P4 à P7 (dont les écritures et l'outil MCP pour un agent IA) ; module graphe en bonus |
 | | S8 | **Projet** - finalisation et **questions individuelles** (dernière séance au plus tard le jeudi 17/12) |
 
 Les **dates limites de rendu** sont indiquées dans l'énoncé de chaque TP.
