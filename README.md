@@ -172,6 +172,8 @@ Chaque séance de TP (S1 à S5) commence par un **point cours** qui présente le
 | S4 | [Modéliser à partir des requêtes, patterns de conception](https://iutinfoaix-r510.github.io/cours/s4-modelisation-patterns.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s4-modelisation-patterns.pdf)) |
 | S5 | [Du relationnel au graphe : Neo4j et Cypher](https://iutinfoaix-r510.github.io/cours/s5-graphe-neo4j-cypher.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s5-graphe-neo4j-cypher.pdf)) |
 | S6 | [Lancement du projet : une vérité, un contrat, un test](https://iutinfoaix-r510.github.io/cours/s6-lancement-projet.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s6-lancement-projet.pdf)) |
+| S7 | [Point d'étape du projet](https://iutinfoaix-r510.github.io/cours/s7-point-etape-projet.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s7-point-etape-projet.pdf)) |
+| S8 | [Consignes des questions individuelles](https://iutinfoaix-r510.github.io/cours/s8-questions-individuelles.html) ([PDF](https://iutinfoaix-r510.github.io/cours/s8-questions-individuelles.pdf)) |
 
 ### Travaux pratiques
 
